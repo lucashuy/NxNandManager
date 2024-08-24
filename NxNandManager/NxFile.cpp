@@ -816,6 +816,8 @@ void NxFile::setContentType(string content_type)
 
 string NxFile::normalizedTitleLabel()
 {
+    return titleIDString();
+    /*
     if (!hasAdditionalString("title_name"))
         return titleIDString();
 
@@ -823,7 +825,7 @@ string NxFile::normalizedTitleLabel()
     label.erase(std::remove_if(label.begin(), label.end(), [](const u8 & c){
         return !std::isalpha(c) && !std::isspace(c) && !std::isdigit(c);
     }), label.end());
-    return label;
+    return label;*/
 }
 
 bool NxFile::setFileTime(const FILETIME* time)
